@@ -16,7 +16,7 @@ jobs:
           command: |
                 python3 -m venv ~/.venv
                 pwd
-                ls
+                ls -lart
                 source ~/.venv/bin/activate
                 make install
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
