@@ -15,14 +15,16 @@ jobs:
           name: install dependency
           command: |
                 python3 -m venv ~/.venv
-                .venv/bin/activate
+                pwd
+                ls
+                source ~/.venv/bin/activate
                 make install
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
           # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
       - run:
           name: Run tests
           command: |
-                .venv/bin/activate
+                source ~/.venv/bin/activate
                 make lint
 
 workflows:
